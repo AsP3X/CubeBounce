@@ -49,7 +49,11 @@ jobs:
 
       - uses: webbertakken/unity-test-runner@v2
         id: testRunner
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
+          projectPath: CubeBounce
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
           testMode: all
 
       - uses: actions/upload-artifact@v2
