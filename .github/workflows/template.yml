@@ -156,7 +156,7 @@ jobs:
           name: build-StandaloneWindows64
           path: build/StandaloneWindows64
 
-  buildWindows:
+  buildLinux:
     needs: testRunner
     name: Build for Linux 🖥️
     runs-on: ubuntu-latest
